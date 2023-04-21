@@ -1,0 +1,42 @@
+navbar:
+  visiable: auto # always, auto
+  logo: # choose [img] or [icon + title]
+    img: volantis-static/media/org.volantis/blog/Logo-NavBar@3x.png # https://gcore.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png
+    icon:
+    title:
+  menu:
+    - name: 博客
+      icon: fa-solid fa-rss
+      url: /
+    - name: 归档
+      icon: fa-solid fa-archive
+      url: archives/
+  search: Search... 
+site_footer:
+  # layout of footer: [aplayer, social, license, info, copyright]
+  layout: [aplayer, social, license, info, copyright]
+  social:
+    - icon: fas fa-rss
+      url: atom.xml
+    - icon: fas fa-envelope
+      url: mailto:yixinbc@foxmail.com
+    - icon: fab fa-github
+      url: https://github.com/yixinBC/
+  copyright: '[Copyright © 2023- yixinBC](/)'
+  # You can add your own property here. (Support markdown, for example: br: '<br>')
+  br: '<br>'
+comments:
+  service: giscus
+  # giscus
+  # https://giscus.app
+  # https://github.com/laymonage/giscus
+  giscus:
+    # 以下配置按照 yml 格式增删填写即可
+     repo: yixinBC/yixinbc.tech
+     repo-id: "R_kgDOJX7vZA"
+     category: Announcements
+     category-id: "DIC_kwDOJX7vZM4CV8CS"
+     mapping: "pathname"
+     reactions-enabled: "1"
+     emit-metadata: "0"
+     lang: "zh-CN"
