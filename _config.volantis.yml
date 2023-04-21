@@ -14,7 +14,7 @@ navbar:
   search: Search... 
 cover:
   height_scheme: full # full, half 
-  layout_scheme: blank # blank (留白), search (搜索), dock (坞), featured (精选), focus (焦点)，个人感觉搜索更简洁
+  layout_scheme: dock # blank (留白), search (搜索), dock (坞), featured (精选), focus (焦点)，个人感觉搜索更简洁
   display:
     home: true
     archive: true
@@ -24,6 +24,7 @@ cover:
   logo: # https://gcore.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-Cover@3x.png
   title: yixinBC's blog
   subtitle: 'always learning'
+  features:
 sidebar:
   position: right # left right 侧边栏的位置
   # 主页、分类、归档等独立页面
@@ -44,6 +45,8 @@ sidebar:
       subtitle: always learning #副标题
       jinrishici: true # Poetry Today. You can set a string, and it will be displayed when loading fails.
       social:
+        - icon: fas fa-rss
+          url: atom.xml
         - icon: fa-solid fa-envelope
           url: mailto:yixinbc@foxmail.com
         - icon: fab fa-github
