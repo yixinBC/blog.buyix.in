@@ -1,0 +1,2 @@
+# yixinbc.tech
+my blog
