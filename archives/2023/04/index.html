@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="https://www.yixinbc.tech/archives/2023/04/"/>
+  <link rel="canonical" href="https://yixinbc.tech/archives/2023/04/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -33,11 +33,13 @@
   <!-- 页面元数据 -->
   <title>归档：2023/4 - yixinBC's blog</title>
   <meta name="keywords" content="null">
-  <meta desc name="description" content="yixinBC's blog - yixinBC - yixinBC's blog">
-  <meta property="og:type" content="website">
+  <meta desc name="description" content="yixinBC的个人博客 - yixinBC - yixinBC's blog">
+  
+<meta property="og:type" content="website">
 <meta property="og:title" content="yixinBC&#39;s blog">
-<meta property="og:url" content="https://www.yixinbc.tech/archives/2023/04/index.html">
+<meta property="og:url" content="https://yixinbc.tech/archives/2023/04/index.html">
 <meta property="og:site_name" content="yixinBC&#39;s blog">
+<meta property="og:description" content="yixinBC的个人博客">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:author" content="yixinBC">
@@ -708,6 +710,122 @@ button {
   -webkit-opacity: 1;
   -moz-opacity: 1;
   border-bottom: 2px solid var(--color-site-inner);
+}
+.cover-wrapper.dock .menu,
+.cover-wrapper.featured .menu,
+.cover-wrapper.focus .menu {
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+}
+.cover-wrapper.dock .menu .list-h a,
+.cover-wrapper.featured .menu .list-h a,
+.cover-wrapper.focus .menu .list-h a {
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+  line-height: 24px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-bottom: none;
+  text-align: center;
+  align-content: flex-end;
+  color: rgba(68,68,68,0.7);
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 500px) {
+  .cover-wrapper.dock .menu .list-h a,
+  .cover-wrapper.featured .menu .list-h a,
+  .cover-wrapper.focus .menu .list-h a {
+    padding: 12px 8px;
+  }
+}
+.cover-wrapper.dock .menu .list-h a i,
+.cover-wrapper.featured .menu .list-h a i,
+.cover-wrapper.focus .menu .list-h a i {
+  margin: 8px;
+}
+.cover-wrapper.dock .menu .list-h a p,
+.cover-wrapper.featured .menu .list-h a p,
+.cover-wrapper.focus .menu .list-h a p {
+  font-size: 0.875rem;
+}
+.cover-wrapper.dock .menu .list-h a.active,
+.cover-wrapper.featured .menu .list-h a.active,
+.cover-wrapper.focus .menu .list-h a.active {
+  background: var(--color-card);
+  backdrop-filter: none;
+}
+.cover-wrapper.dock .menu .list-h a.active i,
+.cover-wrapper.featured .menu .list-h a.active i,
+.cover-wrapper.focus .menu .list-h a.active i,
+.cover-wrapper.dock .menu .list-h a.active i+p,
+.cover-wrapper.featured .menu .list-h a.active i+p,
+.cover-wrapper.focus .menu .list-h a.active i+p {
+  color: #3dd9b6;
+}
+.cover-wrapper.dock .menu .list-h a.active img+p,
+.cover-wrapper.featured .menu .list-h a.active img+p,
+.cover-wrapper.focus .menu .list-h a.active img+p {
+  color: var(--color-text);
+}
+.cover-wrapper.dock .menu .list-h a:hover,
+.cover-wrapper.featured .menu .list-h a:hover,
+.cover-wrapper.focus .menu .list-h a:hover {
+  background: var(--color-card);
+}
+.cover-wrapper.dock .top {
+  margin-bottom: 48px;
+}
+.cover-wrapper.dock .menu {
+  background: rgba(255,255,255,0.5);
+  position: absolute;
+  bottom: 0;
+  max-width: 100%;
+}
+.cover-wrapper.dock .menu .list-h {
+  flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -khtml-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -o-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  margin: 4px;
+}
+.cover-wrapper.dock .menu .list-h a+a {
+  margin-left: 4px;
+}
+@media screen and (max-width: 500px) {
+  .cover-wrapper.dock .menu .list-h {
+    overflow-x: scroll;
+  }
+  .cover-wrapper.dock .menu .list-h::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+  }
+  .cover-wrapper.dock .menu .list-h::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+  .cover-wrapper.dock .menu .list-h::-webkit-scrollbar-thumb {
+    background: #3dd9b6;
+    cursor: pointer;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+  }
+  .cover-wrapper.dock .menu .list-h::-webkit-scrollbar-thumb:hover {
+    background: #ff5722;
+  }
+}
+@supports (backdrop-filter: blur(20px)) {
+  .cover-wrapper.dock .menu {
+    background: rgba(255,255,255,0.5);
+    backdrop-filter: saturate(200%) blur(20px);
+  }
 }
 @font-face {
   font-family: 'UbuntuMono';
@@ -1622,7 +1740,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"../../../js/app.js","parallax":"../../../js/plugins/parallax.js","rightMenu":"../../../js/plugins/rightMenu.js","rightMenus":"../../../js/plugins/rightMenus.js","sites":"../../../js/plugins/tags/sites.js","friends":"../../../js/plugins/tags/friends.js","contributors":"../../../js/plugins/tags/contributors.js","search":"../../../js/search/hexo.js"},"css":{"style":"../../../css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1682060419944),
+    lastupdate: new Date(1682061667046),
     sidebar: {
       for_page: ["blogger"],
       for_post: ["toc"],
@@ -2179,10 +2297,28 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="half" class='cover-wrapper  blank' style="display: ;">
+      <div id="half" class='cover-wrapper  dock' style="display: ;">
         
   <div class='cover-bg lazyload placeholder' data-bg="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg"></div>
 
+<div class='cover-body'>
+  <div class='top'>
+    
+    
+      <p class="title">yixinBC's blog</p>
+    
+    
+      <p class="subtitle">always learning</p>
+    
+  </div>
+  <div class='bottom'>
+    <div class='menu navigation'>
+      <div class='list-h'>
+        
+      </div>
+    </div>
+  </div>
+</div>
 
         <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
       </div>
@@ -2209,13 +2345,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://www.yixinbc.tech/2023/04/21/hello-world/">
+  <link itemprop="mainEntityOfPage" href="https://yixinbc.tech/2023/04/21/hello-world/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="yixinBC's blog">
   </span>
   <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
     <meta itemprop="name" content="yixinBC's blog">
-    <meta itemprop="description" content="">
+    <meta itemprop="description" content="yixinBC的个人博客">
   </span>
   
   
@@ -2244,7 +2380,7 @@ Qu...
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2023-04-21T07:00:09+00:00">2023-04-21</time>
+        <time itemprop="dateCreated datePublished" datetime="2023-04-21T07:20:58+00:00">2023-04-21</time>
         
       </div>
       
@@ -2304,6 +2440,15 @@ Qu...
     
     
       <div class="social-wrapper">
+        
+          
+            <a href="../../../atom.xml"
+              class="social fas fa-rss flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
         
           
             <a href="../../../mailto:yixinbc@foxmail.com"
@@ -2907,7 +3052,7 @@ Qu...
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"yixinBC's blog","url":"https://www.yixinbc.tech/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"yixinBC","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.yixinbc.tech/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.yixinbc.tech/","name":"yixinBC's blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.yixinbc.tech/archives/","name":"Archive"}},{"@type":"ListItem","position":3,"item":{"@id":"https://www.yixinbc.tech/archives/2023/","name":"2023年"}},{"@type":"ListItem","position":4,"item":{"@id":"https://www.yixinbc.tech/archives/2023/4/","name":"4月"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"yixinBC's blog","url":"https://www.yixinbc.tech/","keywords":null,"description":"","author":{"@type":"Person","name":"yixinBC","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.yixinbc.tech/","description":""},"publisher":{"@type":"Organization","name":"yixinBC's blog","url":"https://www.yixinbc.tech/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://www.yixinbc.tech?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"yixinBC","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.yixinbc.tech/"},"publisher":{"@type":"Organization","name":"yixinBC's blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"yixinBC's blog","url":"https://yixinbc.tech/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"yixinBC","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yixinbc.tech/","sameAs":["https://github.com/volantis-x"],"description":"yixinBC的个人博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://yixinbc.tech/","name":"yixinBC's blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://yixinbc.tech/archives/","name":"Archive"}},{"@type":"ListItem","position":3,"item":{"@id":"https://yixinbc.tech/archives/2023/","name":"2023年"}},{"@type":"ListItem","position":4,"item":{"@id":"https://yixinbc.tech/archives/2023/4/","name":"4月"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"yixinBC's blog","url":"https://yixinbc.tech/","keywords":null,"description":"yixinBC的个人博客","author":{"@type":"Person","name":"yixinBC","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yixinbc.tech/","description":"yixinBC的个人博客"},"publisher":{"@type":"Organization","name":"yixinBC's blog","url":"https://yixinbc.tech/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://yixinbc.tech?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"yixinBC的个人博客","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"yixinBC","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yixinbc.tech/"},"publisher":{"@type":"Organization","name":"yixinBC's blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
