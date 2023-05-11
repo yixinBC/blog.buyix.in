@@ -4,10 +4,11 @@ navbar:
     img: volantis-static/media/org.volantis/blog/Logo-NavBar@3x.png # https://gcore.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png
     icon:
     title:
+    url: ../../../../../
   menu:
     - name: 博客
       icon: fa-solid fa-rss
-      url: /
+      url: ../../../../../
     - name: 归档
       icon: fa-solid fa-archive
       url: archives/
