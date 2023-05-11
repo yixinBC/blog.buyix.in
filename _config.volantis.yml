@@ -25,6 +25,15 @@ cover:
   title: yixinBC's blog
   subtitle: 'always learning'
   features:
+# 文章布局
+article:
+  body:
+    meta_library:
+      author:
+        avatar: https://avatars.githubusercontent.com/u/61578883?v=4
+        name: yixinBC
+        url: https://github.com/yixinBC
+
 sidebar:
   position: right # left right 侧边栏的位置
   # 主页、分类、归档等独立页面
