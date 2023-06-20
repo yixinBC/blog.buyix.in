@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.8.0">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="https://yixinbc.tech/archives/"/>
+  
+  <link rel="canonical" href="https://yixinbc.tech/2023/06/20/sctf2023/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -27,23 +27,25 @@
   <!-- Custom Files headBegin end-->
   <!-- front-matter head_begin begin -->
   <!-- front-matter head_begin end -->
-  <link rel="preload" href="../css/style.css" as="style">
+  <link rel="preload" href="../../../../css/style.css" as="style">
   <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>归档 - yixinBC's blog</title>
+  <title>SCTF2023 MISC 部分Writeup - yixinBC's blog</title>
   <meta name="keywords" content="null">
   <meta desc name="description" content="yixinBC的个人博客 - yixinBC - yixinBC's blog">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="yixinBC&#39;s blog">
-<meta property="og:url" content="https://yixinbc.tech/archives/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SCTF2023 MISC 部分Writeup">
+<meta property="og:url" content="https://yixinbc.tech/2023/06/20/SCTF2023/index.html">
 <meta property="og:site_name" content="yixinBC&#39;s blog">
-<meta property="og:description" content="yixinBC的个人博客">
+<meta property="og:description" content="checkin010修改一下压缩包，把第一个经过压缩算法的flag&#x2F;改为flag（record和dirEntry里的都要改）。改完直接用Windows资源管理器开会报错（大概是修得不完美），但是能用7zip解压出来flag文件。打开发现是个压缩包，flag直接明文存在1.txt，所以用010打开能直接看见flag   Fly over the Fuchun River查看图片，可以看到飞">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2023-06-20T15:58:15.000Z">
+<meta property="article:modified_time" content="2023-06-20T08:08:02.147Z">
 <meta property="article:author" content="yixinBC">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -1667,8 +1669,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="../css/style.css" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="../css/style.css"></noscript>
+  <link rel="stylesheet" href="../../../../css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="../../../../css/style.css"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1740,7 +1742,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.GLOBAL_CONFIG ={
     debug: "env",
-    cdn: {"js":{"app":"../js/app.js","parallax":"../js/plugins/parallax.js","rightMenu":"../js/plugins/rightMenu.js","rightMenus":"../js/plugins/rightMenus.js","sites":"../js/plugins/tags/sites.js","friends":"../js/plugins/tags/friends.js","contributors":"../js/plugins/tags/contributors.js","search":"../js/search/hexo.js"},"css":{"style":"../css/style.css"}},
+    cdn: {"js":{"app":"../../../../js/app.js","parallax":"../../../../js/plugins/parallax.js","rightMenu":"../../../../js/plugins/rightMenu.js","rightMenus":"../../../../js/plugins/rightMenus.js","sites":"../../../../js/plugins/tags/sites.js","friends":"../../../../js/plugins/tags/friends.js","contributors":"../../../../js/plugins/tags/contributors.js","search":"../../../../js/search/hexo.js"},"css":{"style":"../../../../css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
     lastupdate: new Date(1687248488447),
     sidebar: {
@@ -2185,7 +2187,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		<div class="nav-main">
       
         
-        <a class="title flat-box" target="_self" href='../index.html'>
+        <a class="title flat-box" target="_self" href='../../../../index.html'>
           
             <img no-lazy class='logo' src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/Logo-NavBar@3x.png'/>
           
@@ -2203,7 +2205,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="../../../../../../" title="博客"
+                href="../../../../../../../../../" title="博客"
                   
                   
                   
@@ -2220,11 +2222,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="" title="归档"
+                href="../../../../archives/" title="归档"
                   
                   
                   
-                    active-action="action-home"
+                    active-action="action-archives"
                   >
                   <i class='fa-solid fa-archive fa-fw'></i>归档
                 </a>
@@ -2256,7 +2258,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="../../../../../../" title="博客"
+                href="../../../../../../../../../" title="博客"
                   
                   
                   
@@ -2273,11 +2275,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="" title="归档"
+                href="../../../../archives/" title="归档"
                   
                   
                   
-                    active-action="action-home"
+                    active-action="action-archives"
                   >
                   <i class='fa-solid fa-archive fa-fw'></i>归档
                 </a>
@@ -2303,7 +2305,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="half" class='cover-wrapper  dock' style="display: ;">
+      <div id="half" class='cover-wrapper post dock' style="display: ;">
         
   <div class='cover-bg lazyload placeholder' data-bg="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg"></div>
 
@@ -2336,63 +2338,218 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-	
-	  <article id="arc" class="post article white-box reveal shadow floatable blur">
-			
-			
-				
-				
-					
-						
-						<h2>2023</h2>
-					
-						<div class='timenode'>
-								<a class="meta" href="../2023/06/20/SCTF2023/">
-									<time>06-20</time>
-									
-										SCTF2023 MISC 部分Writeup
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="../2023/05/11/fenjing/">
-									<time>05-11</time>
-									
-										fenjing(焚靖)——jinja2 SSTI一把梭
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="../2023/04/21/hello-world/">
-									<time>04-21</time>
-									
-										Hexo + volantis配置
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-	  </article>
-	
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="https://yixinbc.tech/2023/06/20/SCTF2023/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="yixinBC's blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="yixinBC's blog">
+    <meta itemprop="description" content="yixinBC的个人博客">
+  </span>
+  
+
+
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title" itemprop="name headline">
+        SCTF2023 MISC 部分Writeup
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' target="_blank" href="https://github.com/yixinBC" rel="nofollow noopener">
+    <img itemprop="image" src="https://avatars.githubusercontent.com/u/61578883?v=4" class="lazyload" data-srcset="https://avatars.githubusercontent.com/u/61578883?v=4" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">yixinBC</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-06-20T15:58:15+00:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2023年6月20日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <h2 id="checkin"><a href="#checkin" class="headerlink" title="checkin"></a>checkin</h2><p>010修改一下压缩包，把第一个经过压缩算法的flag&#x2F;改为flag（record和dirEntry里的都要改）。改完直接用Windows资源管理器开会报错（大概是修得不完美），但是能用7zip解压出来flag文件。打开发现是个压缩包，flag直接明文存在1.txt，所以用010打开能直接看见flag</p>
+<p><img src="2023-06-17-15-51-31-image.png" class="lazyload" data-srcset="2023-06-17-15-51-31-image.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="a"></p>
+<p><img src="2023-06-17-15-51-55-image.png" class="lazyload" data-srcset="2023-06-17-15-51-55-image.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="a"></p>
+<h2 id="Fly-over-the-Fuchun-River"><a href="#Fly-over-the-Fuchun-River" class="headerlink" title="Fly over the Fuchun River"></a>Fly over the Fuchun River</h2><p>查看图片，可以看到飞机编号<code>B-32DC</code>，通过flightaware查询可知是成都航空的航班，查询其四月的历史飞行记录：<a target="_blank" rel="noopener" href="https://zh.flightaware.com/live/flight/B32DC/history/320">https://zh.flightaware.com/live/flight/B32DC/history/320</a> ，根据题目<code>fuchun river</code>，可知此时在杭州，又题目中的拍摄时间为12:15，可查找到一定期的航班<code>CTU-&gt;HGH</code>，且该班次有些晚点，符合的天数只剩4.3、4.7、4.13、4.17。在携程上可以查到该班次航班号为<code>EU2259</code>。枚举一下日期，即可得到flag为<code>SCTF&#123;CTU_HGH_EU2259_413&#125;</code></p>
+
+  </div>
+  
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
+      
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-06-20T08:08:02+00:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2023年6月20日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://yixinbc.tech/2023/06/20/SCTF2023/&title=SCTF2023 MISC 部分Writeup - yixinBC's blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yixinbc.tech/2023/06/20/SCTF2023/&title=SCTF2023 MISC 部分Writeup - yixinBC's blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://yixinbc.tech/2023/06/20/SCTF2023/&title=SCTF2023 MISC 部分Writeup - yixinBC's blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='../../../05/11/fenjing/'>
+          <p class='title'>fenjing(焚靖)——jinja2 SSTI一把梭<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+焚靖是一个针对Jinja2 SSTI的命令行脚本，具有强大的自动绕过WAF功能
+
+安装使用pip（最省事）12pip install fenjingpython -m fenjing scan...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+
+  <article class="post white-box shadow floatable blur" id="comments">
+    <span hidden>
+      <meta itemprop="discussionUrl" content="#comments">
+    </span>
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
+    
+
+    <div id="layoutHelper-comments"></div>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -2401,75 +2558,40 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
-<section class="widget blogger desktop mobile pjax">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box circle' target="_blank" rel="noopener" href='https://github.com/yixinBC'>
-          <img no-lazy src='https://avatars.githubusercontent.com/u/61578883?v=4'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>yixinBC</h2>
-        
-        
-          <p>always learning</p>
-
-        
-        
-          <p><span id="jinrishici-sentence">yixinBC's blog</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="../atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="../mailto:yixinbc@foxmail.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/yixinBC"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
     
   
 
 
 <div class="widget-sticky pjax">
 
+  
+  
+
+
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#checkin"><span class="toc-text">checkin</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Fly-over-the-Fuchun-River"><span class="toc-text">Fly over the Fuchun River</span></a></li></ol>
+    </div>
+  </section>
+
+  
+
 </div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -2505,13 +2627,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -2552,7 +2675,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="social-wrapper" itemprop="about" itemscope itemtype="http://schema.org/Thing">
           
             
-              <a href="../atom.xml"
+              <a href="../../../../atom.xml"
                 class="social fas fa-rss flat-btn"
                 target="_blank"
                 rel="external nofollow noopener noreferrer" itemprop="url">
@@ -2561,7 +2684,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
           
             
-              <a href="../mailto:yixinbc@foxmail.com"
+              <a href="../../../../mailto:yixinbc@foxmail.com"
                 class="social fas fa-envelope flat-btn"
                 target="_blank"
                 rel="external nofollow noopener noreferrer" itemprop="url">
@@ -2635,7 +2758,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="../../js/app.js"></script>
+<script src="../../../../../../../../js/app.js"></script>
 
 
 
@@ -2651,19 +2774,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("../js/plugins/tags/sites.js")
+        volantis.js("../../../../js/plugins/tags/sites.js")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("../js/plugins/tags/friends.js")
+        volantis.js("../../../../js/plugins/tags/friends.js")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("../js/plugins/tags/contributors.js")
+        volantis.js("../../../../js/plugins/tags/contributors.js")
       }
     
   };
@@ -2790,7 +2913,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("../js/search/hexo.js");
+    return volantis.js("../../../../js/search/hexo.js");
   }
 
   function loadSearchService() {
@@ -3039,7 +3162,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"yixinBC's blog","url":"https://yixinbc.tech/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"yixinBC","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yixinbc.tech/","sameAs":["https://github.com/volantis-x"],"description":"yixinBC的个人博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://yixinbc.tech/","name":"yixinBC's blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://yixinbc.tech/archives/","name":"Archive"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"yixinBC's blog","url":"https://yixinbc.tech/","keywords":null,"description":"yixinBC的个人博客","author":{"@type":"Person","name":"yixinBC","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yixinbc.tech/","description":"yixinBC的个人博客"},"publisher":{"@type":"Organization","name":"yixinBC's blog","url":"https://yixinbc.tech/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://yixinbc.tech?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"yixinBC的个人博客","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"yixinBC","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yixinbc.tech/"},"publisher":{"@type":"Organization","name":"yixinBC's blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"yixinBC's blog","url":"https://yixinbc.tech/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"yixinBC","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yixinbc.tech/","sameAs":["https://github.com/volantis-x"],"description":"yixinBC的个人博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://yixinbc.tech/","name":"yixinBC's blog"}},{"@type":"ListItem","position":3,"item":{"@id":"https://yixinbc.tech/2023/06/20/SCTF2023/","name":"SCTF2023 MISC 部分Writeup"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"yixinBC's blog","url":"https://yixinbc.tech/","keywords":null,"description":"yixinBC的个人博客","author":{"@type":"Person","name":"yixinBC","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yixinbc.tech/","description":"yixinBC的个人博客"},"publisher":{"@type":"Organization","name":"yixinBC's blog","url":"https://yixinbc.tech/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://yixinbc.tech?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"SCTF2023 MISC 部分Writeup","description":"yixinBC的个人博客","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://yixinbc.tech/2023/06/20/SCTF2023/"},"author":{"@type":"Person","name":"yixinBC","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yixinbc.tech/"},"publisher":{"@type":"Organization","name":"yixinBC's blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://yixinbc.tech/2023/06/20/SCTF2023/","wordCount":0,"datePublished":"2023-06-20T15:58:15.000Z","dateModified":"2023-06-20T08:08:02.147Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
