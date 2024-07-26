@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.8.0">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="https://yixinbc.tech/archives/2023/"/>
+  
+  <link rel="canonical" href="https://yixinbc.tech/2024/07/26/java-memshell/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -27,23 +27,25 @@
   <!-- Custom Files headBegin end-->
   <!-- front-matter head_begin begin -->
   <!-- front-matter head_begin end -->
-  <link rel="preload" href="../../css/style.css" as="style">
+  <link rel="preload" href="../../../../css/style.css" as="style">
   <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>归档：2023 - yixinBC's blog</title>
+  <title>某Java内存马样本分析 - yixinBC's blog</title>
   <meta name="keywords" content="null">
   <meta desc name="description" content="yixinBC的个人博客 - yixinBC - yixinBC's blog">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="yixinBC&#39;s blog">
-<meta property="og:url" content="https://yixinbc.tech/archives/2023/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="某Java内存马样本分析">
+<meta property="og:url" content="https://yixinbc.tech/2024/07/26/java-memshell/index.html">
 <meta property="og:site_name" content="yixinBC&#39;s blog">
-<meta property="og:description" content="yixinBC的个人博客">
+<meta property="og:description" content="最近空白在“今天你RE了吗”里发了一个Java内存马的样本，据说是已经解了两层加密后提取出来的，感觉用到的一些手法挺有意思的，浅浅分析一下。我使用的反编译工具是jadx 该匿名类的package为org.aspectj.weaver.proxy，查了一下是一个springboot的组件  对类内的变量和函数进行名称混淆，稍稍加大了分析难度  大量使用反射调用来访问方法 m45lllIlIllII这">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2024-07-26T10:38:06.000Z">
+<meta property="article:modified_time" content="2024-07-26T03:11:45.916Z">
 <meta property="article:author" content="yixinBC">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -1667,8 +1669,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="../../css/style.css" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="../../css/style.css"></noscript>
+  <link rel="stylesheet" href="../../../../css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="../../../../css/style.css"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1740,7 +1742,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.GLOBAL_CONFIG ={
     debug: "env",
-    cdn: {"js":{"app":"../../js/app.js","parallax":"../../js/plugins/parallax.js","rightMenu":"../../js/plugins/rightMenu.js","rightMenus":"../../js/plugins/rightMenus.js","sites":"../../js/plugins/tags/sites.js","friends":"../../js/plugins/tags/friends.js","contributors":"../../js/plugins/tags/contributors.js","search":"../../js/search/hexo.js"},"css":{"style":"../../css/style.css"}},
+    cdn: {"js":{"app":"../../../../js/app.js","parallax":"../../../../js/plugins/parallax.js","rightMenu":"../../../../js/plugins/rightMenu.js","rightMenus":"../../../../js/plugins/rightMenus.js","sites":"../../../../js/plugins/tags/sites.js","friends":"../../../../js/plugins/tags/friends.js","contributors":"../../../../js/plugins/tags/contributors.js","search":"../../../../js/search/hexo.js"},"css":{"style":"../../../../css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
     lastupdate: new Date(1721963512848),
     sidebar: {
@@ -2185,7 +2187,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		<div class="nav-main">
       
         
-        <a class="title flat-box" target="_self" href='../../index.html'>
+        <a class="title flat-box" target="_self" href='../../../../index.html'>
           
             <img no-lazy class='logo' src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/Logo-NavBar@3x.png'/>
           
@@ -2203,7 +2205,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="../../../../../../../" title="博客"
+                href="../../../../../../../../../" title="博客"
                   
                   
                   
@@ -2220,11 +2222,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="../" title="归档"
+                href="../../../../archives/" title="归档"
                   
                   
                   
-                    active-action="action-home"
+                    active-action="action-archives"
                   >
                   <i class='fa-solid fa-archive fa-fw'></i>归档
                 </a>
@@ -2256,7 +2258,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="../../../../../../../" title="博客"
+                href="../../../../../../../../../" title="博客"
                   
                   
                   
@@ -2273,11 +2275,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="../" title="归档"
+                href="../../../../archives/" title="归档"
                   
                   
                   
-                    active-action="action-home"
+                    active-action="action-archives"
                   >
                   <i class='fa-solid fa-archive fa-fw'></i>归档
                 </a>
@@ -2303,7 +2305,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="half" class='cover-wrapper  dock' style="display: ;">
+      <div id="half" class='cover-wrapper post dock' style="display: ;">
         
   <div class='cover-bg lazyload placeholder' data-bg="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg"></div>
 
@@ -2336,32 +2338,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-	
-		
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://yixinbc.tech/2023/09/08/fxxk-vs/">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="https://yixinbc.tech/2024/07/26/java-memshell/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="yixinBC's blog">
   </span>
@@ -2370,346 +2348,231 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="yixinBC的个人博客">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title" itemprop="name headline">
+        某Java内存马样本分析
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' target="_blank" href="https://github.com/yixinBC" rel="nofollow noopener">
+    <img itemprop="image" src="https://avatars.githubusercontent.com/u/61578883?v=4" class="lazyload" data-srcset="https://avatars.githubusercontent.com/u/61578883?v=4" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">yixinBC</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-07-26T10:38:06+00:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2024年7月26日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <p>最近空白在“今天你RE了吗”里发了一个Java内存马的样本，据说是已经解了两层加密后提取出来的，感觉用到的一些手法挺有意思的，浅浅分析一下。我使用的反编译工具是jadx</p>
+<p>该匿名类的package为org.aspectj.weaver.proxy，查了一下是一个springboot的组件</p>
+<p><img src="pic1.png" class="lazyload" data-srcset="pic1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="混淆后的变量名与方法名"></p>
+<p>对类内的变量和函数进行名称混淆，稍稍加大了分析难度</p>
+<p><img src="pic2.png" class="lazyload" data-srcset="pic2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="反射调用特征明显"></p>
+<p>大量使用反射调用来访问方法</p>
+<p>m45lllIlIllII这个方法被大量调用，其作用暂时未知。</p>
+<p><img src="pic3.png" class="lazyload" data-srcset="pic3.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="大量调用m45lllIlIllII"></p>
+<p>跟进发现其调用了m46</p>
+<p><img src="pic4.png" class="lazyload" data-srcset="pic4.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="m45"><br><img src="pic5.png" class="lazyload" data-srcset="pic5.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="m46"></p>
+<p>先看被大量调用的m57，根据其大致功能，可以将其重命名为decrypt_name</p>
+<p><img src="pic6.png" class="lazyload" data-srcset="pic6.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="m57"></p>
+<p>难点在于<code>String temp_str = toString(append(new StringBuilder(), getMethodName(getStackTrace(new RuntimeException())[1])));</code><br>中<code>temp_str</code>的取值。写个Java代码测一下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.lang.reflect.Method;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * test1</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">test1</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="comment">/* synthetic */</span> StackTraceElement[] getStackTrace(Object obj) <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        <span class="type">Method</span> <span class="variable">method</span> <span class="operator">=</span> RuntimeException.class.getMethod(<span class="string">&quot;getStackTrace&quot;</span>, <span class="keyword">new</span> <span class="title class_">Class</span>[<span class="number">0</span>]);</span><br><span class="line">        method.setAccessible(<span class="literal">true</span>);</span><br><span class="line">        <span class="keyword">return</span> (StackTraceElement[]) method.invoke(obj, <span class="keyword">new</span> <span class="title class_">Object</span>[<span class="number">0</span>]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="comment">/* synthetic */</span> String <span class="title function_">getMethodName</span><span class="params">(Object obj)</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        <span class="type">Method</span> <span class="variable">method</span> <span class="operator">=</span> StackTraceElement.class.getMethod(<span class="string">&quot;getMethodName&quot;</span>, <span class="keyword">new</span> <span class="title class_">Class</span>[<span class="number">0</span>]);</span><br><span class="line">        method.setAccessible(<span class="literal">true</span>);</span><br><span class="line">        <span class="keyword">return</span> (String) method.invoke(obj, <span class="keyword">new</span> <span class="title class_">Object</span>[<span class="number">0</span>]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="comment">/* synthetic */</span> StringBuilder <span class="title function_">append</span><span class="params">(Object obj, String str)</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        <span class="type">Method</span> <span class="variable">method</span> <span class="operator">=</span> StringBuilder.class.getMethod(<span class="string">&quot;append&quot;</span>, String.class);</span><br><span class="line">        method.setAccessible(<span class="literal">true</span>);</span><br><span class="line">        <span class="keyword">return</span> (StringBuilder) method.invoke(obj, str);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="comment">/* synthetic */</span> String <span class="title function_">toString</span><span class="params">(Object obj)</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        <span class="type">Method</span> <span class="variable">method</span> <span class="operator">=</span> StringBuilder.class.getMethod(<span class="string">&quot;toString&quot;</span>, <span class="keyword">new</span> <span class="title class_">Class</span>[<span class="number">0</span>]);</span><br><span class="line">        method.setAccessible(<span class="literal">true</span>);</span><br><span class="line">        <span class="keyword">return</span> (String) method.invoke(obj, <span class="keyword">new</span> <span class="title class_">Object</span>[<span class="number">0</span>]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        main1(args);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main1</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            StackTraceElement[] stackTrace = getStackTrace(<span class="keyword">new</span> <span class="title class_">RuntimeException</span>());</span><br><span class="line">            <span class="type">StringBuilder</span> <span class="variable">stringBuilder</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>();</span><br><span class="line">            <span class="keyword">for</span> (StackTraceElement stackTraceElement : stackTrace) &#123;</span><br><span class="line">                append(stringBuilder, getMethodName(stackTraceElement));</span><br><span class="line">                append(stringBuilder, <span class="string">&quot;\n&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(toString(stringBuilder));</span><br><span class="line">            <span class="type">String</span> <span class="variable">temp_str</span> <span class="operator">=</span> toString(</span><br><span class="line">                    append(<span class="keyword">new</span> <span class="title class_">StringBuilder</span>(), getMethodName(getStackTrace(<span class="keyword">new</span> <span class="title class_">RuntimeException</span>())[<span class="number">1</span>])));</span><br><span class="line">            System.out.println(temp_str);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>发现temp_str是调用decrypt_name函数的那个方法的方法名。也就是说，这个函数实现了不同方法调用相同函数，key不同。如此，我们遍历一下class文件里的方法名。</p>
+<p>这里可以直接用kaitaistruct库解析class文件提取方法名，发现方法名里的不可见字符其实就是\n。我们写出如下python解密脚本：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">decrypt_name</span>(<span class="params">enc, method_name</span>):</span><br><span class="line">    length = <span class="built_in">len</span>(method_name) - <span class="number">1</span></span><br><span class="line">    length2 = <span class="built_in">len</span>(enc) - <span class="number">1</span></span><br><span class="line">    temp = [<span class="string">&quot;&quot;</span> <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(length2 + <span class="number">1</span>)]</span><br><span class="line">    <span class="keyword">while</span> length2 &gt;= <span class="number">0</span>:</span><br><span class="line">        temp[length2] = <span class="built_in">chr</span>((<span class="built_in">ord</span>(<span class="string">&quot;k&quot;</span>) ^ <span class="built_in">ord</span>(enc[length2])) ^ <span class="built_in">ord</span>(method_name[length]))</span><br><span class="line">        <span class="keyword">if</span> length2 - <span class="number">1</span> &lt; <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        temp[length2 - <span class="number">1</span>] = <span class="built_in">chr</span>(</span><br><span class="line">            (<span class="built_in">ord</span>(<span class="string">&quot;P&quot;</span>) ^ <span class="built_in">ord</span>(enc[length2])) ^ <span class="built_in">ord</span>(method_name[length])</span><br><span class="line">        )</span><br><span class="line">        length -= <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> length &lt; <span class="number">0</span>:</span><br><span class="line">            length = <span class="built_in">len</span>(method_name) - <span class="number">1</span></span><br><span class="line">        length2 -= <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;&quot;</span>.join(temp)</span><br></pre></td></tr></table></figure>
+
+<p>接下去就是苦力活，一个个解密出来，重命名啥的。</p>
+<p>jadx反编译出来有问题，换用JEB。</p>
+<p><img src="pic7.png" class="lazyload" data-srcset="pic7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="另一处加密函数"></p>
+<p>对于method_list_enc中的项进行DES解密，结果存入method_list中，这两个变量就是那两个95项的字符串数组。</p>
+<p>后面的工作纯纯帕鲁，从生成method_list_enc的函数中，先调用decrypt_name解密出来method_list_enc中的每一项，然后使用不同的参数进行des解密每一项，最后从method_list中拿到要反射调用的函数名。最后一个个代回去，就可以恢复代码的逻辑。</p>
+<p>后续🍁✌解完了这一层，结果发现这一层只是gzip解压了一个加密过的class文件，后续内存马逻辑在另一个class里</p>
+<p>还好后续class用的加密思路一脉相承，但是解出来是一个RSA🥲。有点狠</p>
+<p>总结：这个Java内存马的难点就在于其大量使用“动态“的不同的key，使得几乎无法进行批量的解混淆工作。对于RuntimeException的调用栈的使用配合方法名的不可打印字符混淆，是阻碍解混淆工作的一大障碍，后续不同的method使用的DES密钥不同，由下标控制，是解混淆工作的第二重障碍。通过对这个内存马样本的浅薄分析，我发现增加混淆过程与程序执行流的耦合程度，可以较好地对抗批量解混淆的自动化脚本。</p>
+
+  </div>
+  
   
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="../../2023/09/08/fxxk-vs/"  itemprop="url">
-        Windows平台下vcpkg+code+cmake配置踩坑实录
-      </a>
-    </h2>
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
+      
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
+      
+    </div>
   
-  <div class='md article-desc' itemprop="articleBody">
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-07-26T03:11:45+00:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2024年7月26日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
       
-        以配置glut环境为例
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://yixinbc.tech/2024/07/26/java-memshell/&title=某Java内存马样本分析 - yixinBC's blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yixinbc.tech/2024/07/26/java-memshell/&title=某Java内存马样本分析 - yixinBC's blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://yixinbc.tech/2024/07/26/java-memshell/&title=某Java内存马样本分析 - yixinBC's blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='../../../../2023/09/08/fxxk-vs/'>
+          <p class='title'>Windows平台下vcpkg+code+cmake配置踩坑实录<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>以配置glut环境为例
 
 已预安装：visual studio、visual studio code、llvm（clang、clangd）、msys2（gcc）、cmake
-安装vcpkg：git克隆GitHub仓库到本地，按照官方流程执行命令（踩坑点：visual studio要安装英文语言包）
-vcpkg库目录搜索opengl的glut，发现两个库：opengl和freeglut，先把两...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-09-08T20:33:32+00:00">2023-09-08</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='../../2023/09/08/fxxk-vs/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
+安装vcpkg：gi...</p>
+        </a>
       
     </div>
   
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
 
-</div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://yixinbc.tech/2023/08/13/NepCTF2023/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="yixinBC's blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="yixinBC's blog">
-    <meta itemprop="description" content="yixinBC的个人博客">
-  </span>
   
-  
-  
+
+
+  <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+      <meta itemprop="discussionUrl" content="#comments">
     </span>
-  
-  
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="../../2023/08/13/NepCTF2023/"  itemprop="url">
-        NepCTF2023
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        MISC与AI共舞的哈夫曼三血拿下！扔进vscode，然后手动def  decompress函数，等待copilot的AI补全，然后根据报错改改，生成的代码如下：
-123456789101112131415161718192021222324252627282930313233343536373839def decompress(compressed_file, decompressed_f...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-08-13T19:21:01+00:00">2023-08-13</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='../../2023/08/13/NepCTF2023/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
 
-</div>
+    <div id="layoutHelper-comments"></div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://yixinbc.tech/2023/07/13/暑期第一周刷题/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="yixinBC's blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="yixinBC's blog">
-    <meta itemprop="description" content="yixinBC的个人博客">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="../../2023/07/13/%E6%9A%91%E6%9C%9F%E7%AC%AC%E4%B8%80%E5%91%A8%E5%88%B7%E9%A2%98/"  itemprop="url">
-        暑期第一周刷题
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        get_started_3dsctf_2016一开始以为是ret2text板子题（那么大个get_flag函数）。照板子写，打远程，没回显，报错。检查发现函数的返回方式不是leave retn而是retn，遂将fake_ebp的padding去除。没打通。翻网上的题解，发现有师傅提到这题的远程只有程序能正常退出的时候才有回显（确实是老题了，这几年的新题不会这么离谱😅）。遂将get_flag...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-07-13T20:14:37+00:00">2023-07-13</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='../../2023/07/13/%E6%9A%91%E6%9C%9F%E7%AC%AC%E4%B8%80%E5%91%A8%E5%88%B7%E9%A2%98/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://yixinbc.tech/2023/06/20/SCTF2023/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="yixinBC's blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="yixinBC's blog">
-    <meta itemprop="description" content="yixinBC的个人博客">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="../../2023/06/20/SCTF2023/"  itemprop="url">
-        SCTF2023 MISC 部分Writeup
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        checkin010修改一下压缩包，把第一个经过压缩算法的flag&#x2F;改为flag（record和dirEntry里的都要改）。改完直接用Windows资源管理器开会报错（大概是修得不完美），但是能用7zip解压出来flag文件。打开发现是个压缩包，flag直接明文存在1.txt，所以用010打开能直接看见flag
+  </article>
 
 
-Fly over the Fuchun River查看图片，可以...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-06-20T15:58:15+00:00">2023-06-20</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='../../2023/06/20/SCTF2023/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://yixinbc.tech/2023/05/11/fenjing/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="yixinBC's blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="yixinBC's blog">
-    <meta itemprop="description" content="yixinBC的个人博客">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="../../2023/05/11/fenjing/"  itemprop="url">
-        fenjing(焚靖)——jinja2 SSTI一把梭
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        
-焚靖是一个针对Jinja2 SSTI的命令行脚本，具有强大的自动绕过WAF功能
-
-安装使用pip（最省事）12pip install fenjingpython -m fenjing scan --url &#x27;http://xxx/&#x27;
-
-也可下载并运行docker镜像12docker pull marven11/fenjingdocker run --net host -...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-05-11T18:36:24+00:00">2023-05-11</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='../../2023/05/11/fenjing/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://yixinbc.tech/2023/04/21/hello-world/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="yixinBC's blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="yixinBC's blog">
-    <meta itemprop="description" content="yixinBC的个人博客">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="../../2023/04/21/hello-world/"  itemprop="url">
-        Hexo + volantis配置
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        移步GitHub 仓库查看配置文件源码。
-
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-04-21T15:00:00+00:00">2023-04-21</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='../../2023/04/21/hello-world/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-  
 
 
-	
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -2718,75 +2581,30 @@ Fly over the Fuchun River查看图片，可以...
     
     
       
-<section class="widget blogger desktop mobile pjax">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box circle' target="_blank" rel="noopener" href='https://github.com/yixinBC'>
-          <img no-lazy src='https://avatars.githubusercontent.com/u/61578883?v=4'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>yixinBC</h2>
-        
-        
-          <p>always learning</p>
-
-        
-        
-          <p><span id="jinrishici-sentence">yixinBC's blog</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="../../atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="../../mailto:yixinbc@foxmail.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/yixinBC"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
     
   
 
 
 <div class="widget-sticky pjax">
 
+  
+  
+
+
+  <div class="">
+    <!-- pjax占位 -->
+  </div>
+
+  
+
 </div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -2822,13 +2640,14 @@ Fly over the Fuchun River查看图片，可以...
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -2869,7 +2688,7 @@ Fly over the Fuchun River查看图片，可以...
         <div class="social-wrapper" itemprop="about" itemscope itemtype="http://schema.org/Thing">
           
             
-              <a href="../../atom.xml"
+              <a href="../../../../atom.xml"
                 class="social fas fa-rss flat-btn"
                 target="_blank"
                 rel="external nofollow noopener noreferrer" itemprop="url">
@@ -2878,7 +2697,7 @@ Fly over the Fuchun River查看图片，可以...
             
           
             
-              <a href="../../mailto:yixinbc@foxmail.com"
+              <a href="../../../../mailto:yixinbc@foxmail.com"
                 class="social fas fa-envelope flat-btn"
                 target="_blank"
                 rel="external nofollow noopener noreferrer" itemprop="url">
@@ -2952,7 +2771,7 @@ Fly over the Fuchun River查看图片，可以...
 
 <!-- internal -->
 
-<script src="../../../../js/app.js"></script>
+<script src="../../../../../../../../js/app.js"></script>
 
 
 
@@ -2968,19 +2787,19 @@ Fly over the Fuchun River查看图片，可以...
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("../../js/plugins/tags/sites.js")
+        volantis.js("../../../../js/plugins/tags/sites.js")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("../../js/plugins/tags/friends.js")
+        volantis.js("../../../../js/plugins/tags/friends.js")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("../../js/plugins/tags/contributors.js")
+        volantis.js("../../../../js/plugins/tags/contributors.js")
       }
     
   };
@@ -3107,7 +2926,7 @@ Fly over the Fuchun River查看图片，可以...
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("../../js/search/hexo.js");
+    return volantis.js("../../../../js/search/hexo.js");
   }
 
   function loadSearchService() {
@@ -3356,7 +3175,7 @@ Fly over the Fuchun River查看图片，可以...
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"yixinBC's blog","url":"https://yixinbc.tech/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"yixinBC","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yixinbc.tech/","sameAs":["https://github.com/volantis-x"],"description":"yixinBC的个人博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://yixinbc.tech/","name":"yixinBC's blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://yixinbc.tech/archives/","name":"Archive"}},{"@type":"ListItem","position":3,"item":{"@id":"https://yixinbc.tech/archives/2023/","name":"2023年"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"yixinBC's blog","url":"https://yixinbc.tech/","keywords":null,"description":"yixinBC的个人博客","author":{"@type":"Person","name":"yixinBC","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yixinbc.tech/","description":"yixinBC的个人博客"},"publisher":{"@type":"Organization","name":"yixinBC's blog","url":"https://yixinbc.tech/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://yixinbc.tech?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"yixinBC的个人博客","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"yixinBC","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yixinbc.tech/"},"publisher":{"@type":"Organization","name":"yixinBC's blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"yixinBC's blog","url":"https://yixinbc.tech/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"yixinBC","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yixinbc.tech/","sameAs":["https://github.com/volantis-x"],"description":"yixinBC的个人博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://yixinbc.tech/","name":"yixinBC's blog"}},{"@type":"ListItem","position":3,"item":{"@id":"https://yixinbc.tech/2024/07/26/java-memshell/","name":"某Java内存马样本分析"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"yixinBC's blog","url":"https://yixinbc.tech/","keywords":null,"description":"yixinBC的个人博客","author":{"@type":"Person","name":"yixinBC","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yixinbc.tech/","description":"yixinBC的个人博客"},"publisher":{"@type":"Organization","name":"yixinBC's blog","url":"https://yixinbc.tech/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://yixinbc.tech?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"某Java内存马样本分析","description":"yixinBC的个人博客","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://yixinbc.tech/2024/07/26/java-memshell/"},"author":{"@type":"Person","name":"yixinBC","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yixinbc.tech/"},"publisher":{"@type":"Organization","name":"yixinBC's blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://yixinbc.tech/2024/07/26/java-memshell/","wordCount":0,"datePublished":"2024-07-26T10:38:06.000Z","dateModified":"2024-07-26T03:11:45.916Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
