@@ -1,2 +1,3 @@
-# yixinbc.tech
+# blog.buyix.in
+
 my blog
